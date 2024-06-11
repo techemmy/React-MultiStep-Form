@@ -15,6 +15,16 @@ export default {
         alabaster: "hsl(231, 100%, 99%)",
         white: "hsl(0, 0%, 100%)",
       },
+      gridTemplateColumns: {
+        form: "minmax(auto, 280px) auto",
+      },
+      backgroundImage: {
+        sidebarDesktop: "url('/images/bg-sidebar-desktop.svg')",
+        sidebarMobile: "url('/images/bg-sidebar-mobile.svg')",
+      },
+      borderWidth: {
+        1: "1px",
+      },
     },
   },
   plugins: [],

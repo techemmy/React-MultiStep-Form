@@ -14,123 +14,153 @@
   <title>Multi-step form</title>
 </head>
 
-<body class="font-Ubuntu grid justify-center h-svh w-full">
-  <div id="root">
-    <nav>
-      <li>
-        Step 1
-        Your info
-      </li>
-      <li>
-        Step 2
-        Select plan
-      </li>
-      <li>
-        Step 3
-        Add-ons
-      </li>
-      <li>
-        Step 4
-        Summary
-      </li>
+<body class="font-Ubuntu h-screen w-full grid justify-center items-center bg-lightGray">
+  <div id="root" class="p-4 m-5 grid grid-cols-form bg-white rounded-xl">
+    <nav class="bg-sidebarDesktop bg-cover bg-no-repeat bg-bottom pl-8 py-5 pr-5 rounded-xl uppercase">
+      <ol class="mt-3">
+        <li class="flex active items-center mb-5">
+          <p class="flex flex-col justify-center">
+            <span class="text-coolGray">Step 1</span>
+            <span class="text-white font-medium">Your info</span>
+          </p>
+        </li>
+        <li class="flex items-center mb-5">
+          <p class="flex flex-col justify-center">
+            <span class="text-coolGray">Step 2</span>
+            <span class="text-white font-medium">Select plan</span>
+          </p>
+        </li>
+        <li class="flex items-center mb-5">
+          <p class="flex flex-col justify-center">
+            <span class="text-coolGray">Step 3</span>
+            <span class="text-white font-medium">Add-ons</span>
+          </p>
+        </li>
+        <li class="flex items-center mb-5">
+          <p class="flex flex-col justify-center">
+            <span class="text-coolGray">Step 4</span>
+            <span class="text-white font-medium">Summary</span>
+          </p>
+        </li>
+      </ol>
     </nav>
 
-    <main>
-      <section>
-        <section>
-          <!-- Step 1 start -->
+    <main class="flex justify-between flex-col h-full mx-24 py-10">
+      <section class="mb-24">
+        <!-- Step 1 start -->
 
-          Personal info
-          Please provide your name, email address, and phone number.
+        <h2 class="text-3xl font-bold text-marineBlue mb-2">Personal info</h2>
+        <p class="text-coolGray mb-10">Please provide your name, email address, and phone number.</p>
 
-          Name
-          e.g. Stephen King
+        <div class="my-5 flex flex-col relative">
+          <span class="hidden text-strawberryRed font-medium absolute right-0">This field is required</span>
+          <label class="text-marineBlue" for="name">Name</label>
+          <input
+            class="font-medium text-marineBlue mt-1 px-3 py-3 rounded-lg border-solid border-coolGrey border-1 focus:border-purplishBlue cursor-pointer"
+            type="text" name="name" id="name" placeholder="e.g. Stephen King">
+        </div>
 
-          Email Address
-          e.g. stephenking@lorem.com
 
-          Phone Number
-          e.g. +1 234 567 890
+        <div class="my-5 flex flex-col relative">
+          <span class="hidden text-strawberryRed font-medium absolute right-0">This field is required</span>
+          <label class="text-marineBlue" for="email">Email Address</label>
+          <input
+            class="font-medium text-marineBlue mt-1 px-3 py-3 rounded-lg border-solid border-coolGrey border-1 focus:border-purplishBlue cursor-pointer"
+            type="email" name="email" id="email" placeholder="e.g. stephenking@lorem.com">
+        </div>
 
-          Next Step
+        <div class="my-5 flex flex-col relative">
+          <span class="text-strawberryRed font-medium absolute right-0">This field is required</span>
+          <label class="text-marineBlue" for="phone">Phone Number</label>
+          <input
+            class="font-medium text-marineBlue mt-1 px-3 py-3 rounded-lg border-solid border-strawberryRed border-1 focus:border-purplishBlue cursor-pointer"
+            type="number" name="number" id="number" placeholder="e.g. +1 234 567 890">
+        </div>
 
-          <!-- Step 1 end -->
+        <!-- Step 1 end -->
 
-        </section>
-        <section>
-          <!-- Step 2 start -->
+      </section>
+      <section class="flex justify-end">
+        <button class="hidden bg-marineBlue text-white text-lg rounded-lg px-8 py-4">Back Step</button>
+        <button
+          class="bg-marineBlue text-white text-lg rounded-lg px-6 py-3 hover:bg-marineBlue/70 active:bg-marineBlue/90">Next
+          Step</button>
+      </section>
 
-          Select your plan
-          You have the option of monthly or yearly billing.
 
-          Arcade
-          $9/mo
+      <section class="hidden">
+        <!-- Step 2 start -->
 
-          Advanced
-          $12/mo
+        Select your plan
+        You have the option of monthly or yearly billing.
 
-          Pro
-          $15/mo
+        Arcade
+        $9/mo
 
-          Monthly
-          Yearly
+        Advanced
+        $12/mo
 
-          Go Back
-          Next Step
+        Pro
+        $15/mo
 
-          <!-- Step 2 end -->
-        </section>
+        Monthly
+        Yearly
 
-        <section>
-          <!-- Step 3 start -->
+        Go Back
+        Next Step
 
-          Pick add-ons
-          Add-ons help enhance your gaming experience.
+        <!-- Step 2 end -->
+      </section>
 
-          Online service
-          Access to multiplayer games
-          +$1/mo
+      <section class="hidden">
+        <!-- Step 3 start -->
 
-          Larger storage
-          Extra 1TB of cloud save
-          +$2/mo
+        Pick add-ons
+        Add-ons help enhance your gaming experience.
 
-          Customizable Profile
-          Custom theme on your profile
-          +$2/mo
+        Online service
+        Access to multiplayer games
+        +$1/mo
 
-          Go Back
-          Next Step
+        Larger storage
+        Extra 1TB of cloud save
+        +$2/mo
 
-          <!-- Step 3 end -->
-        </section>
+        Customizable Profile
+        Custom theme on your profile
+        +$2/mo
 
-        <section>
-          <!-- Step 4 start -->
+        Go Back
+        Next Step
 
-          Finishing up
-          Double-check everything looks OK before confirming.
+        <!-- Step 3 end -->
+      </section>
 
-          <!-- Dynamically add subscription and add-on selections here -->
+      <section class="hidden">
+        <!-- Step 4 start -->
 
-          Total (per month/year)
+        Finishing up
+        Double-check everything looks OK before confirming.
 
-          Go Back
-          Confirm
+        <!-- Dynamically add subscription and add-on selections here -->
 
-          <!-- Step 4 end -->
-        </section>
+        Total (per month/year)
 
-        <section>
-          <!-- Step 5 start -->
+        Go Back
+        Confirm
 
-          Thank you!
+        <!-- Step 4 end -->
+      </section>
 
-          Thanks for confirming your subscription! We hope you have fun
-          using our platform. If you ever need support, please feel free
-          to email us at support@loremgaming.com.
+      <section class="hidden">
+        <!-- Step 5 start -->
 
-        </section>
+        Thank you!
+
+        Thanks for confirming your subscription! We hope you have fun
+        using our platform. If you ever need support, please feel free
+        to email us at support@loremgaming.com.
+
       </section>
     </main>
   </div>

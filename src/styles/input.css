@@ -5,5 +5,37 @@
 @layer base {
   :root {
     font-family: "Ubuntu", sans-serif;
+    --color-white: hsl(0, 0%, 100%);
+    --color-pastel-blue: hsl(206, 94%, 87%);
+    --color-marine-blue: hsl(213, 96%, 18%);
   }
+}
+
+ol {
+  list-style: none;
+  counter-reset: item;
+}
+li {
+  counter-increment: item;
+  margin-bottom: 5px;
+}
+li:before {
+  margin-right: 1.2rem;
+  content: counter(item);
+  background: transparent;
+  color: white;
+  border: 1px solid var(--color-white);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+li.active:before {
+  background-color: var(--color-pastel-blue);
+  border: 1px solid var(--color-pastel-blue);
+  color: var(--color-marine-blue);
 }
