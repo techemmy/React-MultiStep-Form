@@ -6,6 +6,7 @@ This my solution to the [Multi-step form challenge on Frontend Mentor](https://w
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Run the app](#run-app)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -29,6 +30,31 @@ Users should be able to:
   - A field has been missed
   - The email address is not formatted correctly
   - A step is submitted, but no selection has been made
+
+### Run the app
+
+To setup the app
+
+- Clone the repository
+- Make sure you have node && npm installed. To check that, run
+  ```
+  node -v; npm -v;
+  ```
+  You shouldn't get any errors. If any, search online or ask via an issue
+- After cloning the app, enter the base directory in your terminal and run this
+  to install the required packages
+  ```
+  npm install
+  ```
+- To get the app started, Run
+  ```
+  npm run dev
+  ```
+- To make changes to the css (input.css), run the command below to get your app
+  updated
+  ```
+  npm run build-css:dev
+  ```
 
 ### Screenshot
 
