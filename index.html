@@ -14,9 +14,9 @@
   <title>Multi-step form</title>
 </head>
 
-<body class="font-Ubuntu h-screen w-full grid justify-center ssmin:items-center bg-lightGray">
+<body class="font-Ubuntu h-screen w-full grid justify-center ssmin:content-center ssmin:items-center bg-lightGray">
   <div id="root"
-    class="ssmin:p-4 ssmin:m-5 ssmin:grid ssmin:grid-cols-form flex flex-col bg-white bg-lightGray ssmin:rounded-xl">
+    class="h-[650px] ssmin:p-4 ssmin:m-5 ssmin:grid ssmin:grid-cols-form flex flex-col bg-white bg-lightGray ssmin:rounded-xl">
     <nav
       class="bg-sidebarDesktop ssmax:bg-sidebarMobile bg-cover bg-no-repeat bg-bottom py-5 px-5 sm:pl-8 ssmax:h-60 ssmin:rounded-xl uppercase">
       <ol class="counter__list mt-3 ssmax:flex ssmax:flex-row ssmax:justify-center ssmax:items-start ssmax:h-full">
@@ -49,7 +49,7 @@
 
     <main class="flex justify-between flex-col h-full ssmin:mx-10 md:mx-24 py-10 ssmax:bg-magnolia">
       <section
-        class="hidden py-6 ssmin:mb-24 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
+        class="hidden pb-6 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
         <!-- Step 1 start -->
 
         <h2 class="text-3xl font-bold text-marineBlue mb-2">Personal info</h2>
@@ -59,7 +59,7 @@
           <label class="text-marineBlue" for="name">Name</label>
           <span class="hidden text-strawberryRed font-medium md:absolute right-0">This field is required</span>
           <input
-            class="font-medium text-marineBlue mt-1 px-3 py-3 rounded-lg border-solid border-coolGrey border-1 focus:border-purplishBlue cursor-pointer"
+            class="outline-none font-medium text-marineBlue mt-1 px-3 py-3 rounded-lg border-solid border-coolGrey border-1 focus:border-purplishBlue cursor-pointer"
             type="text" name="name" id="name" placeholder="e.g. Stephen King">
         </div>
 
@@ -68,7 +68,7 @@
           <label class="text-marineBlue" for="email">Email Address</label>
           <span class="hidden text-strawberryRed font-medium md:absolute right-0">This field is required</span>
           <input
-            class="font-medium text-marineBlue mt-1 px-3 py-3 rounded-lg border-solid border-coolGrey border-1 focus:border-purplishBlue cursor-pointer"
+            class="outline-none font-medium text-marineBlue mt-1 px-3 py-3 rounded-lg border-solid border-coolGrey border-1 focus:border-purplishBlue cursor-pointer"
             type="email" name="email" id="email" placeholder="e.g. stephenking@lorem.com">
         </div>
 
@@ -76,7 +76,7 @@
           <label class="text-marineBlue" for="phone">Phone Number</label>
           <span class="text-strawberryRed font-medium md:absolute right-0">This field is required</span>
           <input
-            class="font-medium text-marineBlue mt-1 px-3 py-3 rounded-lg border-solid border-strawberryRed border-1 focus:border-purplishBlue cursor-pointer"
+            class="outline-none font-medium text-marineBlue mt-1 px-3 py-3 rounded-lg border-solid border-strawberryRed border-1 focus:border-purplishBlue cursor-pointer"
             type="number" name="number" id="number" placeholder="e.g. +1 234 567 890">
         </div>
 
@@ -85,7 +85,7 @@
       </section>
 
       <section
-        class="hidden py-6 ssmin:mb-24 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
+        class="hidden pb-6 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
         <!-- Step 2 start -->
 
         <h2 class="text-3xl font-bold text-marineBlue mb-2">Select your plan</h2>
@@ -136,7 +136,7 @@
       </section>
 
       <section
-        class="hidden py-6 ssmin:mb-24 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
+        class="hidden pb-6 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
         <!-- Step 3 start -->
 
         <h2 class="text-3xl font-bold text-marineBlue mb-2">Pick add-ons</h2>
@@ -184,7 +184,7 @@
       </section>
 
       <section
-        class="py-6 ssmin:mb-24 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
+        class="pb-6 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
 
         <!-- Step 4 start -->
         <h2 class="text-3xl font-bold text-marineBlue mb-2">Finishing up</h2>
@@ -243,12 +243,12 @@
             Back</button>
 
           <button
-            class="hidden bg-marineBlue text-white text-lg rounded-lg px-6 py-3 hover:bg-marineBlue/70 active:bg-marineBlue/90">Next
+            class="bg-marineBlue text-white text-lg rounded-lg px-6 py-3 hover:bg-marineBlue/70 active:bg-marineBlue/90">Next
             Step</button>
 
           <!-- Final step confirm button -->
           <button
-            class="bg-purplishBlue text-white text-lg rounded-lg px-6 py-3 hover:bg-purplishBlue/70 active:bg-purplishBlue/90">Confirm</button>
+            class="hidden bg-purplishBlue text-white text-lg rounded-lg px-6 py-3 hover:bg-purplishBlue/70 active:bg-purplishBlue/90">Confirm</button>
         </div>
       </section>
     </main>
