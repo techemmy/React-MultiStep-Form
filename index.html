@@ -19,26 +19,26 @@
     class="ssmin:p-4 ssmin:m-5 ssmin:grid ssmin:grid-cols-form flex flex-col bg-white bg-lightGray ssmin:rounded-xl">
     <nav
       class="bg-sidebarDesktop ssmax:bg-sidebarMobile bg-cover bg-no-repeat bg-bottom py-5 px-5 sm:pl-8 ssmax:h-60 ssmin:rounded-xl uppercase">
-      <ol class="mt-3 ssmax:flex ssmax:flex-row ssmax:justify-center ssmax:items-start ssmax:h-full">
-        <li class="flex items-center mb-5">
+      <ol class="counter__list mt-3 ssmax:flex ssmax:flex-row ssmax:justify-center ssmax:items-start ssmax:h-full">
+        <li class="counter flex items-center mb-5">
           <p class="ssmax:hidden flex flex-col justify-center">
             <span class="text-coolGray">Step 1</span>
             <span class="text-white font-medium">Your info</span>
           </p>
         </li>
-        <li class="flex items-center mb-5">
+        <li class="counter flex items-center mb-5">
           <p class="ssmax:hidden flex flex-col justify-center">
             <span class="text-coolGray">Step 2</span>
             <span class="text-white font-medium">Select plan</span>
           </p>
         </li>
-        <li class="flex active items-center mb-5">
+        <li class="counter flex items-center mb-5">
           <p class="ssmax:hidden flex flex-col justify-center">
             <span class="text-coolGray">Step 3</span>
             <span class="text-white font-medium">Add-ons</span>
           </p>
         </li>
-        <li class="flex items-center mb-5">
+        <li class="counter flex active items-center mb-5">
           <p class="ssmax:hidden flex flex-col justify-center">
             <span class="text-coolGray">Step 4</span>
             <span class="text-white font-medium">Summary</span>
@@ -136,7 +136,7 @@
       </section>
 
       <section
-        class="py-6 ssmin:mb-24 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
+        class="hidden py-6 ssmin:mb-24 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
         <!-- Step 3 start -->
 
         <h2 class="text-3xl font-bold text-marineBlue mb-2">Pick add-ons</h2>
@@ -183,33 +183,41 @@
         <!-- Step 3 end -->
       </section>
 
-      <section class="flex justify-end ssmax:fixed ssmax:bottom-0 ssmax:left-0 ssmax:right-0 ssmax:px-6 ssmax:py-6
-        ssmax:bg-white">
-        <!-- Bottom navigation button -->
-        <div class="w-full flex flex-row justify-between">
+      <section
+        class="py-6 ssmin:mb-24 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
 
-          <button
-            class="bg-transparent text-coolGray text-lg rounded-lg px-6 py-3 hover:text-marineBlue active:text-marineBlue">Go
-            Back</button>
-          <button
-            class="bg-marineBlue text-white text-lg rounded-lg px-6 py-3 hover:bg-marineBlue/70 active:bg-marineBlue/90">Next
-            Step</button>
-        </div>
-      </section>
-
-
-      <section class="hidden">
         <!-- Step 4 start -->
-
-        Finishing up
-        Double-check everything looks OK before confirming.
+        <h2 class="text-3xl font-bold text-marineBlue mb-2">Finishing up</h2>
+        <p class="text-coolGray mb-10">Double-check everything looks OK before confirming.</p>
 
         <!-- Dynamically add subscription and add-on selections here -->
+        <section class="p-4 mb-4 bg-alabaster">
+          <article class="mb-4 flex justify-between items-cener">
+            <div>
+              <p class="text-marineBlue font-medium">Arcade (Yearly)</p>
+              <a class="text-coolGray text-sm underline" href="#">Change</a>
+            </div>
+            <p class="text-marineBlue font-bold">$90/yr</p>
+          </article>
 
-        Total (per month/year)
+          <hr>
 
-        Go Back
-        Confirm
+          <ul class="mt-4">
+            <li class="w-full text-sm flex justify-between">
+              <p class="text-coolGray">Online Service</p>
+              <p class="text-marineBlue">+10/yr</p>
+            </li>
+            <li class="mt-3 w-full text-sm flex justify-between">
+              <p class="text-coolGray">Larger Storage</p>
+              <p class="text-marineBlue">+20/yr</p>
+            </li>
+          </ul>
+        </section>
+
+        <article class="px-4 py-2 flex justify-between">
+          <p class="text-sm text-coolGray">Total (per year)</p>
+          <p class="text-purplishBlue font-bold">$120/yr</p>
+        </article>
 
         <!-- Step 4 end -->
       </section>
@@ -223,6 +231,25 @@
         using our platform. If you ever need support, please feel free
         to email us at support@loremgaming.com.
 
+      </section>
+
+      <section class="flex justify-end ssmax:fixed ssmax:bottom-0 ssmax:left-0 ssmax:right-0 ssmax:px-6 ssmax:py-6
+        ssmax:bg-white">
+        <!-- Bottom navigation button -->
+        <div class="w-full flex flex-row justify-between">
+
+          <button
+            class="bg-transparent text-coolGray text-lg rounded-lg px-6 py-3 hover:text-marineBlue active:text-marineBlue">Go
+            Back</button>
+
+          <button
+            class="hidden bg-marineBlue text-white text-lg rounded-lg px-6 py-3 hover:bg-marineBlue/70 active:bg-marineBlue/90">Next
+            Step</button>
+
+          <!-- Final step confirm button -->
+          <button
+            class="bg-purplishBlue text-white text-lg rounded-lg px-6 py-3 hover:bg-purplishBlue/70 active:bg-purplishBlue/90">Confirm</button>
+        </div>
       </section>
     </main>
   </div>

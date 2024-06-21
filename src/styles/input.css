@@ -11,15 +11,14 @@
   }
 }
 
-ol {
+ol.counter__list {
   list-style: none;
   counter-reset: item;
 }
-li {
+li.counter {
   counter-increment: item;
-  margin-bottom: 5px;
 }
-li:before {
+li.counter:before {
   margin-right: 1.2rem;
   content: counter(item);
   background: transparent;
@@ -34,7 +33,7 @@ li:before {
   cursor: pointer;
 }
 
-li.active:before {
+li.counter.active:before {
   background-color: var(--color-pastel-blue);
   border: 1px solid var(--color-pastel-blue);
   color: var(--color-marine-blue);
