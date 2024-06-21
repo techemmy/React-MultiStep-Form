@@ -26,13 +26,13 @@
             <span class="text-white font-medium">Your info</span>
           </p>
         </li>
-        <li class="flex active items-center mb-5">
+        <li class="flex items-center mb-5">
           <p class="ssmax:hidden flex flex-col justify-center">
             <span class="text-coolGray">Step 2</span>
             <span class="text-white font-medium">Select plan</span>
           </p>
         </li>
-        <li class="flex items-center mb-5">
+        <li class="flex active items-center mb-5">
           <p class="ssmax:hidden flex flex-col justify-center">
             <span class="text-coolGray">Step 3</span>
             <span class="text-white font-medium">Add-ons</span>
@@ -85,7 +85,7 @@
       </section>
 
       <section
-        class="py-6 ssmin:mb-24 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
+        class="hidden py-6 ssmin:mb-24 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
         <!-- Step 2 start -->
 
         <h2 class="text-3xl font-bold text-marineBlue mb-2">Select your plan</h2>
@@ -135,6 +135,53 @@
         <!-- Step 2 end -->
       </section>
 
+      <section
+        class="py-6 ssmin:mb-24 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
+        <!-- Step 3 start -->
+
+        <h2 class="text-3xl font-bold text-marineBlue mb-2">Pick add-ons</h2>
+        <p class="text-coolGray mb-10">Add-ons help enhance your gaming experience.</p>
+
+        <section class="grid gap-y-4">
+          <section
+            class="has-[:checked]:bg-alabaster border-1 border-solid has-[:checked]:border-purplishBlue hover:border-purplishBlue rounded-lg flex items-center gap-x-6 px-4">
+            <input id="online-service" class="accent-purplishBlue w-6 h-6" type="checkbox" checked>
+            <label for="online-service" class="py-4 flex justify-between items-center w-full">
+              <div>
+                <p class="text-marineBlue font-medium">Online service</p>
+                <p class="text-coolGray text-sm">Access to multiplayer games</p>
+              </div>
+              <p class="text-purplishBlue">+$1/mo</p>
+            </label>
+          </section>
+
+          <section
+            class="has-[:checked]:bg-alabaster border-1 border-solid has-[:checked]:border-purplishBlue hover:border-purplishBlue rounded-lg flex items-center gap-x-6 px-4">
+            <input id="larger-storage" class="accent-purplishBlue w-6 h-6" type="checkbox">
+            <label for="larger-storage" class="py-4 flex justify-between items-center w-full">
+              <div>
+                <p class="text-marineBlue font-medium">Larger storage</p>
+                <p class="text-coolGray text-sm">Extra 1TB of cloud save</p>
+              </div>
+              <p class="text-purplishBlue">+$2/mo</p>
+            </label>
+          </section>
+
+          <section
+            class="has-[:checked]:bg-alabaster border-1 border-solid has-[:checked]:border-purplishBlue hover:border-purplishBlue rounded-lg flex items-center gap-x-6 px-4">
+            <input id="customizable-profile" class="accent-purplishBlue w-6 h-6" type="checkbox">
+            <label for="customizable-profile" class="py-4 flex justify-between items-center w-full">
+              <div>
+                <p class="text-marineBlue font-medium">Customizable Profile</p>
+                <p class="text-coolGray text-sm">Custom theme on your profile</p>
+              </div>
+              <p class="text-purplishBlue">+$2/mo</p>
+            </label>
+          </section>
+        </section>
+
+        <!-- Step 3 end -->
+      </section>
 
       <section class="flex justify-end ssmax:fixed ssmax:bottom-0 ssmax:left-0 ssmax:right-0 ssmax:px-6 ssmax:py-6
         ssmax:bg-white">
@@ -150,31 +197,6 @@
         </div>
       </section>
 
-
-
-      <section class="hidden">
-        <!-- Step 3 start -->
-
-        Pick add-ons
-        Add-ons help enhance your gaming experience.
-
-        Online service
-        Access to multiplayer games
-        +$1/mo
-
-        Larger storage
-        Extra 1TB of cloud save
-        +$2/mo
-
-        Customizable Profile
-        Custom theme on your profile
-        +$2/mo
-
-        Go Back
-        Next Step
-
-        <!-- Step 3 end -->
-      </section>
 
       <section class="hidden">
         <!-- Step 4 start -->
