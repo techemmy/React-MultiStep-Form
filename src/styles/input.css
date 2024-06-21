@@ -60,7 +60,7 @@ li.active:before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--color-marine-blue);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -75,10 +75,6 @@ li.active:before {
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: var(--color-marine-blue);
 }
 
 input:focus + .slider {
