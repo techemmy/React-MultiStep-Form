@@ -26,6 +26,7 @@ export default {
         1: "1px",
       },
       screens: {
+        box: "850px",
         ssmax: { max: "375px" },
         ssmin: "376px",
       },
