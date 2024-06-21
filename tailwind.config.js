@@ -25,6 +25,10 @@ export default {
       borderWidth: {
         1: "1px",
       },
+      screens: {
+        ssmax: { max: "375px" },
+        ssmin: "376px",
+      },
     },
   },
   plugins: [],

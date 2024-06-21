@@ -14,30 +14,32 @@
   <title>Multi-step form</title>
 </head>
 
-<body class="font-Ubuntu h-screen w-full grid justify-center items-center bg-lightGray">
-  <div id="root" class="p-4 m-5 grid grid-cols-form bg-white rounded-xl">
-    <nav class="bg-sidebarDesktop bg-cover bg-no-repeat bg-bottom pl-8 py-5 pr-5 rounded-xl uppercase">
-      <ol class="mt-3">
+<body class="font-Ubuntu h-screen w-full grid justify-center ssmin:items-center bg-lightGray">
+  <div id="root"
+    class="ssmin:p-4 ssmin:m-5 ssmin:grid ssmin:grid-cols-form flex flex-col bg-white bg-lightGray ssmin:rounded-xl">
+    <nav
+      class="bg-sidebarDesktop bg-cover bg-no-repeat bg-bottom ssmax:bg-[position:0px_-500px] py-5 px-5 sm:pl-8 ssmax:h-60 ssmin:rounded-xl uppercase">
+      <ol class="mt-3 ssmax:flex ssmax:flex-row ssmax:justify-center ssmax:items-start ssmax:h-full">
         <li class="flex active items-center mb-5">
-          <p class="flex flex-col justify-center">
+          <p class="ssmax:hidden flex flex-col justify-center">
             <span class="text-coolGray">Step 1</span>
             <span class="text-white font-medium">Your info</span>
           </p>
         </li>
         <li class="flex items-center mb-5">
-          <p class="flex flex-col justify-center">
+          <p class="ssmax:hidden flex flex-col justify-center">
             <span class="text-coolGray">Step 2</span>
             <span class="text-white font-medium">Select plan</span>
           </p>
         </li>
         <li class="flex items-center mb-5">
-          <p class="flex flex-col justify-center">
+          <p class="ssmax:hidden flex flex-col justify-center">
             <span class="text-coolGray">Step 3</span>
             <span class="text-white font-medium">Add-ons</span>
           </p>
         </li>
         <li class="flex items-center mb-5">
-          <p class="flex flex-col justify-center">
+          <p class="ssmax:hidden flex flex-col justify-center">
             <span class="text-coolGray">Step 4</span>
             <span class="text-white font-medium">Summary</span>
           </p>
@@ -45,16 +47,17 @@
       </ol>
     </nav>
 
-    <main class="flex justify-between flex-col h-full mx-24 py-10">
-      <section class="mb-24">
+    <main class="flex justify-between flex-col h-full ssmin:mx-10 md:mx-24 py-10 ssmax:bg-magnolia">
+      <section
+        class="ssmin:mb-24 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
         <!-- Step 1 start -->
 
         <h2 class="text-3xl font-bold text-marineBlue mb-2">Personal info</h2>
         <p class="text-coolGray mb-10">Please provide your name, email address, and phone number.</p>
 
         <div class="my-5 flex flex-col relative">
-          <span class="hidden text-strawberryRed font-medium absolute right-0">This field is required</span>
           <label class="text-marineBlue" for="name">Name</label>
+          <span class="hidden text-strawberryRed font-medium md:absolute right-0">This field is required</span>
           <input
             class="font-medium text-marineBlue mt-1 px-3 py-3 rounded-lg border-solid border-coolGrey border-1 focus:border-purplishBlue cursor-pointer"
             type="text" name="name" id="name" placeholder="e.g. Stephen King">
@@ -62,16 +65,16 @@
 
 
         <div class="my-5 flex flex-col relative">
-          <span class="hidden text-strawberryRed font-medium absolute right-0">This field is required</span>
           <label class="text-marineBlue" for="email">Email Address</label>
+          <span class="hidden text-strawberryRed font-medium md:absolute right-0">This field is required</span>
           <input
             class="font-medium text-marineBlue mt-1 px-3 py-3 rounded-lg border-solid border-coolGrey border-1 focus:border-purplishBlue cursor-pointer"
             type="email" name="email" id="email" placeholder="e.g. stephenking@lorem.com">
         </div>
 
         <div class="my-5 flex flex-col relative">
-          <span class="text-strawberryRed font-medium absolute right-0">This field is required</span>
           <label class="text-marineBlue" for="phone">Phone Number</label>
+          <span class="text-strawberryRed font-medium md:absolute right-0">This field is required</span>
           <input
             class="font-medium text-marineBlue mt-1 px-3 py-3 rounded-lg border-solid border-strawberryRed border-1 focus:border-purplishBlue cursor-pointer"
             type="number" name="number" id="number" placeholder="e.g. +1 234 567 890">
@@ -80,7 +83,8 @@
         <!-- Step 1 end -->
 
       </section>
-      <section class="flex justify-end">
+      <section
+        class="flex justify-end ssmax:fixed ssmax:bottom-0 ssmax:left-0 ssmax:right-0 ssmax:px-6 ssmax:py-6 ssmax:bg-white">
         <button class="hidden bg-marineBlue text-white text-lg rounded-lg px-8 py-4">Back Step</button>
         <button
           class="bg-marineBlue text-white text-lg rounded-lg px-6 py-3 hover:bg-marineBlue/70 active:bg-marineBlue/90">Next
