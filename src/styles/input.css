@@ -19,7 +19,6 @@ li.counter {
   counter-increment: item;
 }
 li.counter:before {
-  margin-right: 1.2rem;
   content: counter(item);
   background: transparent;
   color: white;

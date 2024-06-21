@@ -19,26 +19,27 @@
     class="h-[650px] ssmin:p-4 ssmin:m-5 ssmin:grid ssmin:grid-cols-form flex flex-col bg-white bg-lightGray ssmin:rounded-xl">
     <nav
       class="bg-sidebarDesktop ssmax:bg-sidebarMobile bg-cover bg-no-repeat bg-bottom py-5 px-5 sm:pl-8 ssmax:h-60 ssmin:rounded-xl uppercase">
-      <ol class="counter__list mt-3 ssmax:flex ssmax:flex-row ssmax:justify-center ssmax:items-start ssmax:h-full">
-        <li class="counter flex items-center mb-5">
+      <ol
+        class="counter__list gap-x-4 mt-3 ssmax:flex ssmax:flex-row ssmax:justify-center ssmax:items-start ssmax:h-full">
+        <li class="counter flex items-center mb-5 ssmin:before:mr-5">
           <p class="ssmax:hidden flex flex-col justify-center">
             <span class="text-coolGray">Step 1</span>
             <span class="text-white font-medium">Your info</span>
           </p>
         </li>
-        <li class="counter flex items-center mb-5">
+        <li class="counter flex items-center mb-5 ssmin:before:mr-5">
           <p class="ssmax:hidden flex flex-col justify-center">
             <span class="text-coolGray">Step 2</span>
             <span class="text-white font-medium">Select plan</span>
           </p>
         </li>
-        <li class="counter flex items-center mb-5">
+        <li class="counter flex items-center mb-5 ssmin:before:mr-5">
           <p class="ssmax:hidden flex flex-col justify-center">
             <span class="text-coolGray">Step 3</span>
             <span class="text-white font-medium">Add-ons</span>
           </p>
         </li>
-        <li class="counter flex active items-center mb-5">
+        <li class="counter flex active items-center mb-5 ssmin:before:mr-5">
           <p class="ssmax:hidden flex flex-col justify-center">
             <span class="text-coolGray">Step 4</span>
             <span class="text-white font-medium">Summary</span>
@@ -184,7 +185,7 @@
       </section>
 
       <section
-        class="pb-6 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
+        class="hidden pb-6 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
 
         <!-- Step 4 start -->
         <h2 class="text-3xl font-bold text-marineBlue mb-2">Finishing up</h2>
@@ -222,14 +223,18 @@
         <!-- Step 4 end -->
       </section>
 
-      <section class="hidden">
+      <section
+        class="flex flex-col justify-center items-center h-full pb-6 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
         <!-- Step 5 start -->
 
-        Thank you!
+        <img class="" src="/images/icon-thank-you.svg" alt="Thank you">
 
-        Thanks for confirming your subscription! We hope you have fun
-        using our platform. If you ever need support, please feel free
-        to email us at support@loremgaming.com.
+        <h2 class="text-3xl font-bold text-marineBlue mb-2 mt-6">Thank you!</h2>
+
+
+        <p class="text-center text-coolGray w-max-[450px]">Thanks for confirming your subscription! We hope you have fun
+          using our platform. If you ever need support, please feel free
+          to email us at support@loremgaming.com.</p>
 
       </section>
 
@@ -253,6 +258,7 @@
       </section>
     </main>
   </div>
+
   <!-- <script type="module" src="/src/main.jsx"></script> -->
 </body>
 
