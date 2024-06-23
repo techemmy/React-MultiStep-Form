@@ -10,8 +10,9 @@ function App() {
   const handleBtnClick = (operation) => {
     setStep(step + operation)
   }
+
   return (<>
-    <Sidebar step={step} />
+    <Sidebar step={step} handleStepChange={setStep} />
 
     <main className="flex justify-between flex-col h-full ssmin:mx-10 md:mx-24 py-10 ssmax:bg-magnolia">
       <FormContent step={step} />

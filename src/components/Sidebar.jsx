@@ -1,4 +1,4 @@
-export default function Sidebar({ step: currentStep }) {
+export default function Sidebar({ step: currentStep, handleStepChange }) {
   const steps = {
     1: "Your info",
     2: "Select plan",
@@ -14,9 +14,9 @@ export default function Sidebar({ step: currentStep }) {
         {Object.keys(steps).map(step => {
           const activeState = parseInt(step) === currentStep ? 'active' : ''
           return (
-            <li key={`step-${steps[step]}`} className={`${activeState} counter flex items-center mb-5 ssmin:before:mr-5`} >
+            <li key={`step-${steps[step]}`} onClick={() => handleStepChange(parseInt(step))} className={`${activeState} counter flex items-center mb-5 ssmin:before:mr-5`} >
               <p className="ssmax:hidden flex flex-col justify-center">
-                <span className="text-coolGray">Step 1</span>
+                <span className="text-coolGray">Step {step}</span>
                 <span className="text-white font-medium">{steps[step]}</span>
               </p>
             </li>
