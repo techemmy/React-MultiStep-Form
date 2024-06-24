@@ -12,10 +12,17 @@ export default function Sidebar({ step: currentStep, handleStepChange }) {
       <ol
         className="counter__list gap-x-4 mt-3 ssmax:flex ssmax:flex-row ssmax:justify-center ssmax:items-start ssmax:h-full">
         {Object.keys(steps).map(step => {
-          const activeState = parseInt(step) === currentStep ? 'active' : ''
-          const activeThankYouPage = !Object.keys(steps).includes(currentStep.toString()) && parseInt(step) === 4 ? 'active' : ''
+          const stepNo = parseInt(step);
+          const activeState = stepNo === currentStep ? 'active' : ''
+          const activeThankYouPage = !Object.keys(steps).includes(currentStep.toString()) && stepNo === 4 ? 'active' : ''
+
+          const operation = stepNo - currentStep;
           return (
-            <li key={`step-${steps[step]}`} onClick={() => handleStepChange(parseInt(step))} className={`${activeState} counter flex items-center mb-5 ssmin:before:mr-5 ${activeThankYouPage}`} >
+            <li
+              key={`step-${steps[step]}`}
+              onClick={() => handleStepChange(operation)}
+              className={`${activeState} counter flex items-center mb-5 ssmin:before:mr-5 ${activeThankYouPage}`}
+            >
               <p className="ssmax:hidden flex flex-col justify-center">
                 <span className="text-coolGray">Step {step}</span>
                 <span className="text-white font-medium">{steps[step]}</span>
