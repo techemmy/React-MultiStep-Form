@@ -1,7 +1,7 @@
-export default function FormStep2() {
+export default function FormStep2(props) {
   return (
 
-    <section
+    <form
       className="pb-6 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
 
       <h2 className="text-3xl font-bold text-marineBlue mb-2">Select your plan</h2>
@@ -46,6 +46,6 @@ export default function FormStep2() {
         <p className="text-coolGray">Yearly</p>
 
       </section>
-    </section>
+    </form>
   )
 }
