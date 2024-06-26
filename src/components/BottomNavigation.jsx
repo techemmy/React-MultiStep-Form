@@ -11,9 +11,13 @@ export default function BottomNavigation({ step, handleBtnClick }) {
     <section className="flex justify-end ssmax:fixed ssmax:bottom-0 ssmax:left-0 ssmax:right-0 ssmax:px-6 ssmax:py-6
         ssmax:bg-white">
       <div className={`w-full flex flex-row ${step === 1 ? 'justify-end' : 'justify-between'}`}>
-        {backBtn}
-        {nextBtn}
-        {confirmBtn}
+        {step + 1 <= totalFormSteps && (
+          <>
+            {backBtn}
+            {nextBtn}
+            {confirmBtn}
+          </>
+        )}
       </div>
     </section >
   )
