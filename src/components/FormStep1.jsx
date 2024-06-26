@@ -1,7 +1,7 @@
 import React from "react"
 
-export default function FormStep1({ values, errors, handleChange }) {
-  const { name, email, number } = values;
+export default function FormStep1({ userFormValues, userFormErrors: errors, handleUserFormChange: handleChange }) {
+  const { name, email, number } = userFormValues;
   return (
     <form
       className="pb-6 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
