@@ -31,7 +31,7 @@ export default function FormStep1({ userFormValues, userFormErrors: errors, hand
         <span className={`${errors.number ? '' : 'hidden'} transition-all text-strawberryRed font-medium md:absolute right-0`}>This field is required</span>
         <input
           className={`${errors.number ? 'border-strawberryRed' : ''} transition-all outline-none font-medium text-marineBlue mt-1 px-3 py-3 rounded-lg border-solid border-1 focus:border-purplishBlue cursor-pointer`}
-          type="number" name="number" id="number" placeholder="e.g. +1 234 567 890" defaultValue={number} onChange={handleChange} />
+          type="text" name="number" id="number" placeholder="e.g. +1 234 567 890" defaultValue={number} onChange={handleChange} />
       </div>
 
     </form>
