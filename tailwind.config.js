@@ -27,7 +27,7 @@ export default {
       },
       screens: {
         box: "850px",
-        ssmax: { max: "375px" },
+        ssmax: { max: "639px" },
         ssmin: "376px",
       },
     },

@@ -69,7 +69,7 @@ function App() {
     <>
       <Sidebar step={step} handleStepChange={handleNavBtnClick} />
 
-      <main className="flex justify-between flex-col h-full ssmin:mx-10 md:mx-24 py-10 ssmax:bg-magnolia">
+      <main className="flex justify-between flex-col h-full sm:mx-10 md:mx-24 py-10 ssmax:bg-magnolia">
         <FormContent
           period={period}
 
