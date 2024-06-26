@@ -4,20 +4,15 @@ import Sidebar from "./components/Sidebar"
 import './styles/output.css';
 import { FORM_STEPS, PLANS, planActions } from "./constants";
 
-const validators = {
-  1: ({ name, email, number }, errorDispatcher) => {
-    const userFormErrors = {
-      name: name.trim() === '' ? true : false,
-      email: email.trim() === '' ? true : false,
-      number: number.trim() === '' ? true : false,
-    }
-    if (errorDispatcher) {
-      errorDispatcher(userFormErrors)
-    }
-    return Object.values(userFormErrors).includes(true) ? false : true
+function isValidUserForm({ name, email, number }) {
+  // a truthy field means there's an error
+  const userFormErrors = {
+    name: name.trim() === '' ? true : false,
+    email: email.trim() === '' ? true : false,
+    number: number.trim() === '' ? true : false,
   }
+  return [Object.values(userFormErrors).includes(true) ? false : true, userFormErrors]
 }
-
 function planReducer(state, action) {
   switch (action.type) {
     case planActions.CHANGE_PLAN:
@@ -59,7 +54,9 @@ function App() {
   }
 
   const handleNavBtnClick = (operation) => {
-    if (step === 1 && !validators[step](userForm, setUserFormErrors)) {
+    const [isValid, errors] = isValidUserForm(userForm)
+    if (step === 1 && !isValid) {
+      setUserFormErrors(errors)
       return
     }
     setStep(step + operation)
