@@ -5,9 +5,9 @@ This my solution to the [Multi-step form challenge on Frontend Mentor](https://w
 ## Table of contents
 
 - [Overview](#overview)
+  - [Screenshot](#screenshot)
   - [The challenge](#the-challenge)
   - [Run the app](#run-app)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -15,6 +15,11 @@ This my solution to the [Multi-step form challenge on Frontend Mentor](https://w
 - [Author](#author)
 
 ## Overview
+
+### Screenshot
+
+![Form step 1](./public/images/screenshot.png)
+
 
 ### The challenge
 
@@ -54,10 +59,6 @@ To setup the app
   ```
   npm run build-css:dev
   ```
-
-### Screenshot
-
-![Form step 1](./public/images/screenshot.png)
 
 ### Links
 
