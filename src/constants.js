@@ -44,3 +44,21 @@ export const planActions = {
   CHANGE_PLAN: "change-plan",
   CHANGE_PLAN_OPTION: "change-plan-option",
 };
+
+export const ADDONS = [
+  {
+    name: "Online service",
+    description: "Access to multiplayer games",
+    price: "+$1/mo",
+  },
+  {
+    name: "Larger storage",
+    description: "Extra 1TB of cloud save",
+    price: "+$2/mo",
+  },
+  {
+    name: "Customizable Profile",
+    description: "Custom theme on your profile",
+    price: "+$2/mo",
+  },
+];
