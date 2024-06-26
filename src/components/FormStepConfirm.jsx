@@ -1,4 +1,4 @@
-export default function FormStepConfirm({ period, plan, selectedPlan, addOns }) {
+export default function FormStepConfirm({ period, plan, selectedPlan, addOns, handleStepChange }) {
   const total = addOns.reduce(
     (total, currAddOn) => currAddOn.selected ? total + currAddOn.price : total, selectedPlan.price
   );
@@ -13,7 +13,13 @@ export default function FormStepConfirm({ period, plan, selectedPlan, addOns }) 
         <article className="mb-4 flex justify-between items-cener">
           <div>
             <p className="text-marineBlue font-medium">{selectedPlan.name} ({plan})</p>
-            <a className="text-coolGray text-sm underline" href="#">Change</a>
+            <a
+              className="text-coolGray text-sm underline"
+              href="#"
+              onClick={() => handleStepChange(-2)}
+            >
+              Change
+            </a>
           </div>
           <p className="text-marineBlue font-bold">{`${selectedPlan.price}/${period}`}</p>
         </article>
