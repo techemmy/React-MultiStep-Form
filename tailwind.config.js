@@ -16,7 +16,7 @@ export default {
         white: "hsl(0, 0%, 100%)",
       },
       gridTemplateColumns: {
-        form: "minmax(auto, 280px) auto",
+        form: "250px auto",
       },
       backgroundImage: {
         sidebarDesktop: "url('/images/bg-sidebar-desktop.svg')",
