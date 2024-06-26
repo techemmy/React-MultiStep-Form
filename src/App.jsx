@@ -68,10 +68,11 @@ function App() {
 
   const handleNavBtnClick = (operation) => {
     const [isValid, errors] = isValidUserForm(userForm)
+    setUserFormErrors(errors)
     if (step === 1 && !isValid) {
-      setUserFormErrors(errors)
       return
     }
+
     setStep(step + operation)
   }
 
