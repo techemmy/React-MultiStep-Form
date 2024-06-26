@@ -43,7 +43,7 @@ function App() {
     setUserForm({ ...userForm, [e.target.name]: e.target.value })
   }
 
-  const handleNavBtnClick = (operation) => {
+  const handleStepChange = (operation) => {
     const [isValid, errors] = isValidUserForm(userForm)
     setUserFormErrors(errors)
     if (step === 1 && !isValid) {
@@ -67,7 +67,7 @@ function App() {
   const period = plan.toLowerCase().includes("mo") ? "mo" : "yr";
   return (
     <>
-      <Sidebar step={step} handleStepChange={handleNavBtnClick} />
+      <Sidebar step={step} handleStepChange={handleStepChange} />
 
       <main className="flex justify-between flex-col h-full sm:mx-10 md:mx-24 py-10 ssmax:bg-magnolia">
         <FormContent
@@ -85,12 +85,13 @@ function App() {
 
           addOns={addOns}
           handleAddOnUpdated={handleAddOnUpdated}
+          handleStepChange={handleStepChange}
 
           selectedPlan={PLANS[plan].find(plan => {
             return plan.name === planOption
           })}
         />
-        <BottomNavigation step={step} handleBtnClick={handleNavBtnClick} />
+        <BottomNavigation step={step} handleBtnClick={handleStepChange} />
       </main>
     </>)
 }
