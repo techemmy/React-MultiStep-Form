@@ -1,4 +1,4 @@
-export default function AddOnCard({ name, description, price, selected = false, handleAddOnClicked }) {
+export default function AddOnCard({ period, name, description, price, selected = false, handleAddOnClicked }) {
   return (
     <section
       className="has-[:checked]:bg-alabaster border-1 border-solid has-[:checked]:border-purplishBlue hover:border-purplishBlue rounded-lg flex items-center gap-x-6 px-4">
@@ -8,7 +8,7 @@ export default function AddOnCard({ name, description, price, selected = false, 
           <p className="text-marineBlue font-medium">{name}</p>
           <p className="text-coolGray text-sm">{description}</p>
         </div>
-        <p className="text-purplishBlue">{price}</p>
+        <p className="text-purplishBlue">{`+${price}/${period}`}</p>
       </label>
     </section >
   )

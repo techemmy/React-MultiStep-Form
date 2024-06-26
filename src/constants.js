@@ -12,53 +12,73 @@ export const FORM_STEPS = {
   5: FormStepThanks,
 };
 
+export const ACTIONS = {
+  CHANGE_PLAN: "change-plan",
+  CHANGE_PLAN_OPTION: "change-plan-option",
+  UPDATE_ADDONS: "update-addons",
+};
+
 export const PLANS = {
-  monthly: [
-    { name: "Arcade", price: "$9/mo", icon: "/images/icon-arcade.svg" },
-    { name: "Advanced", price: "$12/mo", icon: "/images/icon-advanced.svg" },
-    { name: "Pro", price: "$15/mo", icon: "/images/icon-pro.svg" },
+  Monthly: [
+    { name: "Arcade", price: 9, icon: "/images/icon-arcade.svg" },
+    { name: "Advanced", price: 12, icon: "/images/icon-advanced.svg" },
+    { name: "Pro", price: 15, icon: "/images/icon-pro.svg" },
   ],
-  yearly: [
+  Yearly: [
     {
       name: "Arcade",
-      price: "$90/yr",
+      price: 90,
       icon: "/images/icon-arcade.svg",
       freeMonths: 2,
     },
     {
       name: "Advanced",
-      price: "$120/yr",
+      price: 120,
       icon: "/images/icon-advanced.svg",
       freeMonths: 2,
     },
     {
       name: "Pro",
-      price: "$150/yr",
+      price: 150,
       icon: "/images/icon-pro.svg",
       freeMonths: 2,
     },
   ],
 };
 
-export const planActions = {
-  CHANGE_PLAN: "change-plan",
-  CHANGE_PLAN_OPTION: "change-plan-option",
+export const ADDONS = {
+  Monthly: [
+    {
+      name: "Online service",
+      description: "Access to multiplayer games",
+      price: 1,
+    },
+    {
+      name: "Larger storage",
+      description: "Extra 1TB of cloud save",
+      price: 2,
+    },
+    {
+      name: "Customizable Profile",
+      description: "Custom theme on your profile",
+      price: 2,
+    },
+  ],
+  Yearly: [
+    {
+      name: "Online service",
+      description: "Access to multiplayer games",
+      price: 10,
+    },
+    {
+      name: "Larger storage",
+      description: "Extra 1TB of cloud save",
+      price: 20,
+    },
+    {
+      name: "Customizable Profile",
+      description: "Custom theme on your profile",
+      price: 20,
+    },
+  ],
 };
-
-export const ADDONS = [
-  {
-    name: "Online service",
-    description: "Access to multiplayer games",
-    price: "+$1/mo",
-  },
-  {
-    name: "Larger storage",
-    description: "Extra 1TB of cloud save",
-    price: "+$2/mo",
-  },
-  {
-    name: "Customizable Profile",
-    description: "Custom theme on your profile",
-    price: "+$2/mo",
-  },
-];

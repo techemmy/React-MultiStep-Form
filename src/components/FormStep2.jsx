@@ -1,6 +1,6 @@
 import { PLANS } from "../constants";
 import PlanCard from "./PlanCard";
-export default function FormStep2({ plan, planOptions, handlePlanChange, selectedPlanOption, handlePlanOptionChange }) {
+export default function FormStep2({ period, plan, planOptions, handlePlanChange, selectedPlanOption, handlePlanOptionChange }) {
   const plans = Object.keys(PLANS);
   return (
     <form
@@ -16,6 +16,7 @@ export default function FormStep2({ plan, planOptions, handlePlanChange, selecte
             name={name}
             price={price}
             icon={icon}
+            period={period}
             freeMonths={freeMonths}
             selected={name === selectedPlanOption}
             changePlanOption={handlePlanOptionChange}

@@ -1,4 +1,4 @@
-export default function PlanCard({ name, price, icon, freeMonths = '', selected, changePlanOption }) {
+export default function PlanCard({ name, price, icon, freeMonths = '', selected, changePlanOption, period = 'mo' }) {
   return (
     <div
       onClick={() => changePlanOption(name)}
@@ -6,7 +6,7 @@ export default function PlanCard({ name, price, icon, freeMonths = '', selected,
       <img className="w-10 sm:pb-10 mr-2 sm:mr-16" src={icon} alt={`${name} Plan`} />
       <article>
         <p className="text-marineBlue font-medium">{name}</p>
-        <p className="text-sm text-coolGray">{price}</p>
+        <p className="text-sm text-coolGray">{`${price}/${period}`}</p>
         {freeMonths && <p className="mt-1 text-xs text-marineBlue">{freeMonths} months free</p>}
       </article>
     </div>

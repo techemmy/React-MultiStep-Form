@@ -1,6 +1,6 @@
 import AddOnCard from "./AddOnCard";
 
-export default function FormStep3({ addOns, handleAddOnUpdated }) {
+export default function FormStep3({ period, addOns, handleAddOnUpdated }) {
   return (
     <section
       className="pb-6 ssmax:mx-5 ssmax:px-6 ssmax:pt-6 ssmax:rounded-lg bg-white ssmax:relative ssmax:top-[-103px]">
@@ -15,6 +15,7 @@ export default function FormStep3({ addOns, handleAddOnUpdated }) {
             name={name}
             description={description}
             price={price}
+            period={period}
             selected={selected}
             handleAddOnClicked={handleAddOnUpdated}
           />
