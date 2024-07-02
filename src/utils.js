@@ -1,10 +1,14 @@
 import { ACTIONS, PLANS, ADDONS } from "./constants";
 
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
 export function isValidUserForm({ name, email, number }) {
   const userFormErrors = {
     // a truthy field means there's an error
     name: name.trim() === "" ? true : false,
-    email: email.trim() === "" ? true : false,
+    email: email.trim() === "" || !isValidEmail(email.trim()) ? true : false,
     number: number.trim() === "" ? true : false,
   };
   return [
